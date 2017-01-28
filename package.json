@@ -1,0 +1,15 @@
+{
+  "name": "Learn-ES6",
+  "version": "0.0.1",
+  "description": "Learn es6",
+  "main": "index.js",
+  "repository": "git@github.com:samarpanda/Learn-ES6.git",
+  "author": "er.samarpanda@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "co": "^4.6.0"
+  },
+  "dependencies": {
+    "node-fetch": "^1.6.3"
+  }
+}

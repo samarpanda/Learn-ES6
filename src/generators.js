@@ -35,3 +35,32 @@ function run(generator){
     anotherPromise.then( y => iterator.next(y))
   })
 }
+
+/**
+ * Sample implementation
+ */
+function* crossBridge (){
+  const reply = yield 'What is your favorite color?'
+  // console.log('Reply: ', reply);
+  if(reply !== 'yellow') return 'Wrong'
+  return 'You may pass.'
+}
+
+{
+  const iter = crossBridge();
+  const q = iter.next("YO").value
+  console.log(q)
+  const a = iter.next('blue').value
+  console.log(a)
+}
+
+{
+  const iter = crossBridge();
+  const q = iter.next("YO").value
+  console.log(q)
+  const a = iter.next('yellow').value
+  console.log(a)
+}
+
+const isPromise = (obj) => typeof obj !== 'undefined' && typeof obj.then === 'function';
+

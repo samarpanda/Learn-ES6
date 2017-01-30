@@ -6,7 +6,7 @@ fetch("http://jsonplaceholder.typicode.com/posts/1")
   .then(post => post.title)
   .then(x => console.log('Title: ', x));
 
-co(function *(){
+co(function* (){
   const url = "http://jsonplaceholder.typicode.com/posts/1"
   const response = yield fetch(url)
   const post = yield response.json()
@@ -14,7 +14,7 @@ co(function *(){
   console.log('CO: ', title)
 })
 
-run(function *(){
+run(function* (){
   const url = "http://jsonplaceholder.typicode.com/posts/1"
   const response = yield fetch(url)
   const post = yield response.json()

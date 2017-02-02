@@ -1,5 +1,4 @@
-const fetch = require("node-fetch")
-const co = require('co')
+const co = require('co');
 
 fetch("http://jsonplaceholder.typicode.com/posts/1")
   .then(response => response.json())
@@ -40,10 +39,10 @@ function run(generator){
  * Sample implementation
  */
 function* crossBridge (){
-  const reply = yield 'What is your favorite color?'
-  // console.log('Reply: ', reply);
-  if(reply !== 'yellow') return 'Wrong'
-  return 'You may pass.'
+  const reply = yield 'What is your favorite color?';
+  if(reply !== 'yellow') 
+    return 'Wrong';
+  return 'You may pass.';
 }
 
 {

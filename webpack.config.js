@@ -1,8 +1,4 @@
-const babelCore = require("babel-core/register");
-const babelPolyfill = require("babel-polyfill");
-// const runtime = require('babel-runtime');// 74950 67891
-
-const path = require('path')
+const path = require('path');
 const loaders = require('./webpack/loaders')
 const plugins = require('./webpack/plugins')
 const publicPath = require('./package.json').publicPath
@@ -45,7 +41,7 @@ const config = module.exports = {
         host: 'localhost',
         port: 8080,
         compress: true,
-        open: true
+        open: false
     },
     devtool: 'inline-source-map'
 }
